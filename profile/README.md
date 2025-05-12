@@ -91,19 +91,3 @@ Doppar makes package development not just possible, but **enjoyable and powerful
 
 ### 🛠️ Build Something Great
 Doppar is designed to get out of your way—so you can build faster and cleaner. From commands (pool) to rich Eloquent ORM tools, Doppar ensures your workflow is smooth and enjoyable.
-
-## Contributing
-
-Thank you for considering contributing to the Doppar framework! The contribution guide can be found in the [Doppar documentation](https://doppar.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Doppar community is welcoming to all, please review and abide by the [Code of Conduct](https://doppar.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-Please review [our security policy](https://github.com/doppar/framework/security/policy) on how to report security vulnerabilities.
-
-## License
-
-The Doppar framework is open-sourced software licensed under the [MIT license](LICENSE.md).
