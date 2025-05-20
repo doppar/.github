@@ -72,21 +72,3 @@ jobs:
 
           # Make date available to other steps
           echo "date=$(echo $FORMATED_DATE)" >> $GITHUB_OUTPUT;
-
-      - name: Update Changelog
-        uses: stefanzweifel/changelog-updater-action@v1
-        with:
-          # Pass extracted release date, release notes and version to the Action.
-          release-date: ${{ steps.release_date.outputs.date }}
-          release-notes: ${{ inputs.notes }}
-          latest-version: ${{ inputs.version }}
-          compare-url-target-revision: ${{ inputs.branch }}
-          parse-github-usernames: true
-
-      - name: Commit updated CHANGELOG
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          # Push updated CHANGELOG to release target branch.
-          branch: ${{ inputs.branch }}
-          commit_message: Update CHANGELOG
-          file_pattern: CHANGELOG.md
