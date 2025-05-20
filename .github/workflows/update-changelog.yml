@@ -5,16 +5,16 @@ on:
     inputs:
       branch:
         description: 'Target branch'
-        type: string
         default: ${{ github.event.release.target_commitish }}
+        type: string
       version:
         description: 'Released version'
-        type: string
         default: ${{ github.event.release.tag_name }}
+        type: string
       notes:
         description: 'Release notes'
-        type: string
         default: ${{ github.event.release.body }}
+        type: string
 
 jobs:
   update:
@@ -24,7 +24,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
+          # Fetch entire history of repository to ensure release date can be
+          # extracted from commit of the given tag.
           fetch-depth: 0
+          # Checkout target branch of this release. Ensures that the CHANGELOG
+          # is not out of date.
           ref: ${{ inputs.branch }}
 
       - name: Check if branch and release match
@@ -55,34 +59,34 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            core.setFailed('Release version does not match branch major version. Aborting.')
+              core.setFailed('Workflow failed. Release version does not match with selected target branch. Changelog not updated automatically.')
 
       - name: Extract release date from git tag
         id: release_date
         run: |
-          TIMESTAMP=$(git log -1 --date=unix --format=%ad '${{ inputs.version }}')
-          FORMATTED_DATE=$(date -u -d @$TIMESTAMP +%Y-%m-%d)
-          echo "date=$FORMATTED_DATE" >> $GITHUB_OUTPUT
+          # Get UNIX timestamp from git-tag
+          TIMESTAMP_OF_RELEASE_COMMIT=$(git log -1 --date=unix --format=%ad '${{ inputs.version }}');
 
-      - name: Debug notes input
-        run: |
-          echo ">>> Notes <<<"
-          echo "${{ inputs.notes }}"
-          echo ">>> End <<<"
+          # Convert timestamp to UTC date in Y-m-d format
+          FORMATED_DATE=$(date -u -d @$TIMESTAMP_OF_RELEASE_COMMIT +%Y-%m-%d)
 
-      - name: Update Changelog
-        uses: stefanzweifel/changelog-updater-action@v1
-        with:
-          release-date: ${{ steps.release_date.outputs.date }}
-          release-notes: ${{ inputs.notes }}
-          latest-version: ${{ inputs.version }}
-          compare-url-target-revision: ${{ inputs.branch }}
-          parse-github-usernames: true
-          path-to-changelog: CHANGELOG.md
+          # Make date available to other steps
+          echo "date=$(echo $FORMATED_DATE)" >> $GITHUB_OUTPUT;
+
+      # - name: Update Changelog
+      #   uses: stefanzweifel/changelog-updater-action@v1
+      #   with:
+      #     # Pass extracted release date, release notes and version to the Action.
+      #     release-date: ${{ steps.release_date.outputs.date }}
+      #     release-notes: ${{ inputs.notes }}
+      #     latest-version: ${{ inputs.version }}
+      #     compare-url-target-revision: ${{ inputs.branch }}
+      #     parse-github-usernames: true
 
       - name: Commit updated CHANGELOG
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
+          # Push updated CHANGELOG to release target branch.
           branch: ${{ inputs.branch }}
           commit_message: Update CHANGELOG
           file_pattern: CHANGELOG.md
