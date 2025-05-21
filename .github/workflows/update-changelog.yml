@@ -5,15 +5,15 @@ on:
     inputs:
       branch:
         description: 'Target branch'
-        default: ${{ github.event.release.target_commitish }}
+        required: true
         type: string
       version:
         description: 'Released version'
-        default: ${{ github.event.release.tag_name }}
+        required: true
         type: string
       notes:
         description: 'Release notes'
-        default: ${{ github.event.release.body }}
+        required: true
         type: string
 
 jobs:
@@ -24,69 +24,51 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          # Fetch entire history of repository to ensure release date can be
-          # extracted from commit of the given tag.
           fetch-depth: 0
-          # Checkout target branch of this release. Ensures that the CHANGELOG
-          # is not out of date.
           ref: ${{ inputs.branch }}
 
-      - name: Check if branch and release match
-        if: ${{ inputs.branch != 'main' && inputs.branch != 'master' }}
-        id: guard
+      - name: Prepare CHANGELOG.md
+        id: prepare_changelog
         run: |
-          NUMERIC_VERSION="${RELEASE_TAG_NAME#v}"
-          MAJOR_VERSION="${NUMERIC_VERSION%%.*}"
-          BRANCH_MAJOR_VERSION="${BRANCH%%.*}"
-
-          echo "MAJOR_VERSION=$(echo $MAJOR_VERSION)" >> $GITHUB_OUTPUT;
-          echo "BRANCH_MAJOR_VERSION=$(echo $BRANCH_MAJOR_VERSION)" >> $GITHUB_OUTPUT;
-
-          if [ "$MAJOR_VERSION" != "$BRANCH_MAJOR_VERSION" ]; then
-            echo "Mismatched versions! Aborting."
-            VERSION_MISMATCH='true';
-          else
-            echo "Versions match! Proceeding."
-            VERSION_MISMATCH='false';
+          # Create file if doesn't exist
+          if [ ! -f "CHANGELOG.md" ]; then
+            echo "# Release Notes" > CHANGELOG.md
+            echo "" >> CHANGELOG.md
+            echo "## Unreleased" >> CHANGELOG.md
           fi
-          echo "VERSION_MISMATCH=$(echo $VERSION_MISMATCH)" >> $GITHUB_OUTPUT;
-        env:
-          BRANCH: ${{ inputs.branch }}
-          RELEASE_TAG_NAME: ${{ inputs.version }}
+          
+          # Ensure proper format if file exists
+          if ! grep -q "## Unreleased" CHANGELOG.md; then
+            echo "" >> CHANGELOG.md
+            echo "## Unreleased" >> CHANGELOG.md
+          fi
 
-      - name: Fail if branch and release tag do not match
-        if: ${{ steps.guard.outputs.VERSION_MISMATCH == 'true' }}
-        uses: actions/github-script@v7
-        with:
-          script: |
-              core.setFailed('Workflow failed. Release version does not match with selected target branch. Changelog not updated automatically.')
-
-      - name: Extract release date from git tag
+      - name: Extract release date
         id: release_date
         run: |
-          # Get UNIX timestamp from git-tag
-          TIMESTAMP_OF_RELEASE_COMMIT=$(git log -1 --date=unix --format=%ad '${{ inputs.version }}');
+          TIMESTAMP=$(git log -1 --date=unix --format=%ad '${{ inputs.version }}')
+          echo "date=$(date -u -d @$TIMESTAMP +%Y-%m-%d)" >> $GITHUB_OUTPUT
 
-          # Convert timestamp to UTC date in Y-m-d format
-          FORMATED_DATE=$(date -u -d @$TIMESTAMP_OF_RELEASE_COMMIT +%Y-%m-%d)
-
-          # Make date available to other steps
-          echo "date=$(echo $FORMATED_DATE)" >> $GITHUB_OUTPUT;
+      - name: Prepare notes
+        id: prepare_notes
+        run: |
+          # Clean and format notes
+          NOTES=$(echo '${{ inputs.notes }}' | sed 's/^"//;s/"$//')
+          echo "notes=${NOTES//$'\n'/\\n}" >> $GITHUB_OUTPUT
 
       - name: Update Changelog
         uses: stefanzweifel/changelog-updater-action@v1
         with:
-          # Pass extracted release date, release notes and version to the Action.
           release-date: ${{ steps.release_date.outputs.date }}
-          release-notes: ${{ inputs.notes }}
+          release-notes: ${{ steps.prepare_notes.outputs.notes }}
           latest-version: ${{ inputs.version }}
           compare-url-target-revision: ${{ inputs.branch }}
-          parse-github-usernames: true
+          path-to-changelog: CHANGELOG.md
+          heading-text: "## [${{ inputs.version }}] - ${{ steps.release_date.outputs.date }}"
 
-      - name: Commit updated CHANGELOG
+      - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          # Push updated CHANGELOG to release target branch.
           branch: ${{ inputs.branch }}
-          commit_message: Update CHANGELOG
+          commit_message: "Update CHANGELOG for ${{ inputs.version }}"
           file_pattern: CHANGELOG.md
