@@ -73,15 +73,18 @@ jobs:
           # Make date available to other steps
           echo "date=$(echo $FORMATED_DATE)" >> $GITHUB_OUTPUT;
 
-      - name: Set release notes to env
-        run: echo "RELEASE_NOTES<<EOF"$'\n'"${{ inputs.notes }}"$'\n'EOF >> "$GITHUB_ENV"
+      - name: Write release notes to temp file
+        run: |
+          echo "${{ inputs.notes }}" > RELEASE_NOTES.md
+          cat RELEASE_NOTES.md
+        shell: bash
 
       - name: Update Changelog
         uses: stefanzweifel/changelog-updater-action@v1
         with:
           # Pass extracted release date, release notes and version to the Action.
           release-date: ${{ steps.release_date.outputs.date }}
-          release-notes: ${{ env.RELEASE_NOTES }}
+          release-notes: ${{ inputs.notes }}
           latest-version: ${{ inputs.version }}
           compare-url-target-revision: ${{ inputs.branch }}
           parse-github-usernames: true
