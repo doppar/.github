@@ -41,7 +41,7 @@ Doppar sustained `~7x higher` throughput than Laravel (318 vs 44 req/s). Doppar 
 
 Under high-concurrency, database-backed scenarios, Doppar significantly outperforms Laravel in raw speed, latency, and efficiency. This makes Doppar a strong choice for applications requiring high throughput and low response times. Doppar isn’t just a `new PHP framework` — it outperforms PHP's popular framework by nearly an order of magnitude in concurrency + DB tests.
 
-#### Key highlights:
+### Key highlights:
 
 - **Simplicity with Power** Intuitive architecture that stays out of your way.
 - **Feature-Based Development** Organize your application by features, not layers.
