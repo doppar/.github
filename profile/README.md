@@ -19,7 +19,7 @@ We just put Doppar to the test under some serious load — and the results are i
 
 ### Doppar Performance Benchmark
 
-**Objective:** Compare request handling and latency between Doppar and Laravel under high concurrency with a database-backed endpoint.
+**Objective:** Compare request handling and latency of Doppar under high concurrency with a database-backed endpoint.
 
 - **Load:** 50,000 requests
 - **Concurrency:** 1,000 simultaneous requests
