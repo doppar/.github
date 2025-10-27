@@ -11,9 +11,9 @@
 <a href="https://github.com/doppar/framework/blob/main/LICENSE"><img src="https://img.shields.io/github/license/doppar/framework" alt="License"></a>
 </p>
 
-## Why Doppar?
+## [Why Doppar?](https://doppar.com/versions/3.x/getting-started.html)
 
-Doppar is engineered for speed. With minimal reliance on third-party libraries and most features built directly into the core, you get lightning-fast performance right out of the box. No unnecessary bloat—just clean, efficient execution. Doppar ORM Built entirely from core with zero external dependencies, Doppar delivers a powerful and expressive ORM system. Manage complex relationships with ease—no third-party packages required. Whether you're a seasoned PHP developer or just diving in, Doppar makes it easy to build powerful applications quickly and cleanly.
+Doppar is engineered for speed. With minimal reliance on third-party libraries and most features built directly into the core, you get lightning-fast performance right out of the box. No unnecessary bloat—just clean, efficient execution. Doppar Entity ORM and Entity Builder, built entirely from core with zero external dependencies, delivers a powerful and expressive ORM system. Whether you're a seasoned PHP developer or just diving in, Doppar makes it easy to build powerful applications quickly and cleanly.
 
 👉 If you’re building systems that demand real scalability, high concurrency, and reliable performance, Doppar is ready to power them.
 
