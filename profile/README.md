@@ -17,6 +17,8 @@ Doppar is engineered for speed. With minimal reliance on third-party libraries a
 
 👉 If you’re building systems that demand real scalability, high concurrency, and reliable performance, Doppar is ready to power them.
 
+<a href="https://www.buymeacoffee.com/mahedisulaa" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
 ### Key highlights:
 
 - **Simplicity with Power** Intuitive architecture that stays out of your way.
