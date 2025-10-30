@@ -19,8 +19,6 @@ Doppar brings both worlds together. It offers aristocratic elegance in syntax an
 
 👉 If you’re building systems that demand real scalability, high concurrency, and reliable performance, Doppar is ready to power them.
 
-<a href="https://www.buymeacoffee.com/mahedisulaa" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-
 ## Contributing
 
 Thank you for considering contributing to the Doppar framework! The contribution guide can be found in the [Doppar documentation](https://doppar.com/versions/3.x/contributions.html).
