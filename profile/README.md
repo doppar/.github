@@ -13,23 +13,13 @@
 
 ## [Why Doppar?](https://doppar.com/versions/3.x/getting-started.html)
 
-Doppar is engineered for speed. With minimal reliance on third-party libraries and most features built directly into the core, you get lightning-fast performance right out of the box. No unnecessary bloat—just clean, efficient execution. Doppar Entity ORM and Entity Builder, built entirely from core with zero external dependencies, delivers a powerful and expressive ORM system. Whether you're a seasoned PHP developer or just diving in, Doppar makes it easy to build powerful applications quickly and cleanly.
+As developers, we constantly seek harmony in our craft — the balance between elegance and performance. Often, we find one at the cost of the other: elegant syntax that slows us down, or high performance wrapped in complexity.
+
+Doppar brings both worlds together. It offers aristocratic elegance in syntax and uncompromising performance under the hood — a framework designed for developers who value both beauty and speed.
 
 👉 If you’re building systems that demand real scalability, high concurrency, and reliable performance, Doppar is ready to power them.
 
 <a href="https://www.buymeacoffee.com/mahedisulaa" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-
-### Key highlights:
-
-- **Simplicity with Power** Intuitive architecture that stays out of your way.
-- **Feature-Based Development** Organize your application by features, not layers.
-- **Just-in-Time (JIT)** Advanced JIT compilation for the Blade template engine.
-- **Performance First** Lightweight and efficient, designed for speed without compromise.
-- **Scalable & Modular** Perfect for projects of all sizes—from microservices to full-scale.
-- **API Presenter Bundle** Fully internal, zero-config API Presenter. no overrides required.
-- **Two-Factor Authentication (TOTP)** Industry-standard TOTP Authentication.
-- **Rich Ecosystem** Eloquent ORM, Routing, Middleware, Pool Console, Caching and more.
-- **Developer-Focused** Simplifies development with thoughtful conventions.
 
 ## Contributing
 
