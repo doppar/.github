@@ -13,24 +13,26 @@
 
 ## [Why Doppar?](https://doppar.com/versions/3.x/getting-started.html)
 
-As developers, we constantly seek harmony in our craft — the balance between elegance and performance. Often, we find one at the cost of the other: elegant syntax that slows us down, or high performance wrapped in complexity.
+As developers, we continually strive for harmony in our craft — a balance between elegance and performance. Often, we find one at the cost of the other: elegant syntax that slows us down, or high performance wrapped in complexity.
 
 Doppar brings both worlds together. It offers aristocratic elegance in syntax and uncompromising performance under the hood — a framework designed for developers who value both beauty and speed.
 
-👉 If you’re building systems that demand real scalability, high concurrency, and reliable performance, Doppar is ready to power them.
+If you’re building systems that demand real scalability, high concurrency, and reliable performance, Doppar is ready to power them.
 
-## Contributing
+## Ecosystem
+- [AI](https://doppar.com/versions/3.x/doppar-ai.html)
+- [Queue](https://doppar.com/versions/3.x/doppar-queue.html)
+- [Airbend](https://doppar.com/versions/3.x/doppar-airbend.html)
+- [Insight](https://doppar.com/versions/3.x/doppar-insight.html)
+- [Flarion](https://doppar.com/versions/3.x/doppar-flarion.html)
+- [Notifier](https://doppar.com/versions/3.x/doppar-notifier.html)
+- [Orion](https://doppar.com/versions/3.x/doppar-orion.html)
+- [Guard](https://doppar.com/versions/3.x/doppar-guard.html)
+- [Axios](https://doppar.com/versions/3.x/doppar-axios.html)
+- [OAuthic](https://doppar.com/versions/3.x/doppar-oauthic.html)
+- [Bloom](https://doppar.com/versions/3.x/doppar-bloom.html)
+- [Twig Bridge](https://doppar.com/versions/3.x/doppar-twig-bridge.html)
 
-Thank you for considering contributing to the Doppar framework! The contribution guide can be found in the [Doppar documentation](https://doppar.com/versions/3.x/contributions.html).
-
-## Code of Conduct
-
-In order to ensure that the Doppar community is welcoming to all, please review and abide by the [Code of Conduct](https://doppar.com/versions/3.x/contributions.html#code-of-conduct).
-
-## Security Vulnerabilities
-
-Please review [our security policy](https://github.com/doppar/framework/security/policy) on how to report security vulnerabilities.
-
-## License
-
-The Doppar framework is open-sourced software licensed under the [MIT license](LICENSE.md).
+## Learn
+Welcome to the official learning hub for the Doppar PHP Framework. Here you’ll find easy-to-follow tutorials, practical examples, and beginner-friendly guides designed to help you master Doppar.
+[Watch Tutorial](https://www.youtube.com/@doppar-3x)
