@@ -11,6 +11,12 @@
 <a href="https://github.com/doppar/framework/blob/main/LICENSE"><img src="https://img.shields.io/github/license/doppar/framework" alt="License"></a>
 </p>
 
+<p align="center">
+    <a href="https://github.com/doppar" target="_blank">
+        <img src="https://img.shields.io/github/followers/doppar?label=GitHub&style=social" alt="GitHub Followers">
+    </a>
+</p>
+
 ## [Why Doppar?](https://doppar.com/versions/3.x/getting-started.html)
 
 As developers, we continually strive for harmony in our craft — a balance between elegance and performance. Often, we find one at the cost of the other: elegant syntax that slows us down, or high performance wrapped in complexity.
