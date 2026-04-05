@@ -11,7 +11,7 @@
 <a href="https://github.com/doppar/framework/blob/main/LICENSE"><img src="https://img.shields.io/github/license/doppar/framework" alt="License"></a>
 </p>
 
-## [Why Doppar?](https://doppar.com/versions/3.x/getting-started.html)
+## [Why Doppar?](https://doppar.com/versions/3.x/getting-started)
 
 As developers, we continually strive for harmony in our craft — a balance between elegance and performance. Often, we find one at the cost of the other: elegant syntax that slows us down, or high performance wrapped in complexity.
 
@@ -20,18 +20,18 @@ Doppar brings both worlds together. It offers aristocratic elegance in syntax an
 If you’re building systems that demand real scalability, high concurrency, and reliable performance, Doppar is ready to power them.
 
 ## Ecosystem
-- [AI](https://doppar.com/versions/3.x/doppar-ai.html)
-- [Queue](https://doppar.com/versions/3.x/doppar-queue.html)
-- [Airbend](https://doppar.com/versions/3.x/doppar-airbend.html)
-- [Insight](https://doppar.com/versions/3.x/doppar-insight.html)
-- [Flarion](https://doppar.com/versions/3.x/doppar-flarion.html)
-- [Notifier](https://doppar.com/versions/3.x/doppar-notifier.html)
-- [Orion](https://doppar.com/versions/3.x/doppar-orion.html)
-- [Guard](https://doppar.com/versions/3.x/doppar-guard.html)
-- [Axios](https://doppar.com/versions/3.x/doppar-axios.html)
-- [OAuthic](https://doppar.com/versions/3.x/doppar-oauthic.html)
-- [Bloom](https://doppar.com/versions/3.x/doppar-bloom.html)
-- [Twig Bridge](https://doppar.com/versions/3.x/doppar-twig-bridge.html)
+- [AI](https://doppar.com/versions/3.x/doppar-ai)
+- [Queue](https://doppar.com/versions/3.x/doppar-queue)
+- [Airbend](https://doppar.com/versions/3.x/doppar-airbend)
+- [Insight](https://doppar.com/versions/3.x/doppar-insight)
+- [Flarion](https://doppar.com/versions/3.x/doppar-flarion)
+- [Notifier](https://doppar.com/versions/3.x/doppar-notifier)
+- [Orion](https://doppar.com/versions/3.x/doppar-orion)
+- [Guard](https://doppar.com/versions/3.x/doppar-guard)
+- [Axios](https://doppar.com/versions/3.x/doppar-axios)
+- [OAuthic](https://doppar.com/versions/3.x/doppar-oauthic)
+- [Bloom](https://doppar.com/versions/3.x/doppar-bloom)
+- [Twig Bridge](https://doppar.com/versions/3.x/doppar-twig-bridge)
 
 ## Learn
 Welcome to the official learning hub for the Doppar PHP Framework. Here you’ll find easy-to-follow tutorials, practical examples, and beginner-friendly guides designed to help you master Doppar.
