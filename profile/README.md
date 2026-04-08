@@ -34,5 +34,5 @@ If you’re building systems that demand real scalability, high concurrency, and
 - [Twig Bridge](https://doppar.com/versions/3.x/doppar-twig-bridge)
 
 ## Learn
-Welcome to the official learning hub for the Doppar PHP Framework. Here you’ll find easy-to-follow tutorials, practical examples, and beginner-friendly guides designed to help you master Doppar.
+Welcome to the official learning hub for the Doppar PHP Framework. Here you will find easy-to-follow tutorials, practical examples, and beginner-friendly guides designed to help you master Doppar.
 [Watch Tutorial](https://www.youtube.com/@doppar-3x)
