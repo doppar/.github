@@ -17,7 +17,7 @@ As developers, we continually strive for harmony in our craft — a balance betw
 
 Doppar brings both worlds together. It offers aristocratic elegance in syntax and uncompromising performance under the hood — a framework designed for developers who value both beauty and speed.
 
-If you’re building systems that demand real scalability, high concurrency, and reliable performance, Doppar is ready to power them.
+If you are building systems that demand real scalability, high concurrency, and reliable performance, Doppar is ready to power them.
 
 ## Ecosystem
 - [AI](https://doppar.com/versions/3.x/doppar-ai)
