@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="120" viewBox="0 0 680 200">
+<style>
+text { font-family: monospace; font-size: 11px; font-weight: 500; }
+.on  { fill: #111827; }
+.off { fill: #d1d5db; }
+@media (prefers-color-scheme: dark) {
+  .on  { fill: #f9fafb; }
+  .off { fill: #374151; }
+}
+</style>
+<!-- D -->
+<text class="on"  x="135" y="30">1</text><text class="on"  x="147" y="30">1</text><text class="off" x="159" y="30">0</text><text class="off" x="171" y="30">0</text>
+<text class="on"  x="135" y="44">1</text><text class="off" x="147" y="44">0</text><text class="on"  x="159" y="44">1</text><text class="off" x="171" y="44">0</text>
+<text class="on"  x="135" y="58">1</text><text class="off" x="147" y="58">0</text><text class="off" x="159" y="58">0</text><text class="on"  x="171" y="58">1</text>
+<text class="on"  x="135" y="72">1</text><text class="off" x="147" y="72">0</text><text class="off" x="159" y="72">0</text><text class="on"  x="171" y="72">1</text>
+<text class="on"  x="135" y="86">1</text><text class="off" x="147" y="86">0</text><text class="off" x="159" y="86">0</text><text class="on"  x="171" y="86">1</text>
+<text class="on"  x="135" y="100">1</text><text class="off" x="147" y="100">0</text><text class="on"  x="159" y="100">1</text><text class="off" x="171" y="100">0</text>
+<text class="on"  x="135" y="114">1</text><text class="on"  x="147" y="114">1</text><text class="off" x="159" y="114">0</text><text class="off" x="171" y="114">0</text>
+<!-- O -->
+<text class="off" x="205" y="30">0</text><text class="on"  x="217" y="30">1</text><text class="on"  x="229" y="30">1</text><text class="off" x="241" y="30">0</text>
+<text class="on"  x="205" y="44">1</text><text class="off" x="217" y="44">0</text><text class="off" x="229" y="44">0</text><text class="on"  x="241" y="44">1</text>
+<text class="on"  x="205" y="58">1</text><text class="off" x="217" y="58">0</text><text class="off" x="229" y="58">0</text><text class="on"  x="241" y="58">1</text>
+<text class="on"  x="205" y="72">1</text><text class="off" x="217" y="72">0</text><text class="off" x="229" y="72">0</text><text class="on"  x="241" y="72">1</text>
+<text class="on"  x="205" y="86">1</text><text class="off" x="217" y="86">0</text><text class="off" x="229" y="86">0</text><text class="on"  x="241" y="86">1</text>
+<text class="on"  x="205" y="100">1</text><text class="off" x="217" y="100">0</text><text class="off" x="229" y="100">0</text><text class="on"  x="241" y="100">1</text>
+<text class="off" x="205" y="114">0</text><text class="on"  x="217" y="114">1</text><text class="on"  x="229" y="114">1</text><text class="off" x="241" y="114">0</text>
+<!-- P -->
+<text class="on"  x="275" y="30">1</text><text class="on"  x="287" y="30">1</text><text class="on"  x="299" y="30">1</text><text class="off" x="311" y="30">0</text>
+<text class="on"  x="275" y="44">1</text><text class="off" x="287" y="44">0</text><text class="off" x="299" y="44">0</text><text class="on"  x="311" y="44">1</text>
+<text class="on"  x="275" y="58">1</text><text class="off" x="287" y="58">0</text><text class="off" x="299" y="58">0</text><text class="on"  x="311" y="58">1</text>
+<text class="on"  x="275" y="72">1</text><text class="on"  x="287" y="72">1</text><text class="on"  x="299" y="72">1</text><text class="off" x="311" y="72">0</text>
+<text class="on"  x="275" y="86">1</text><text class="off" x="287" y="86">0</text><text class="off" x="299" y="86">0</text><text class="off" x="311" y="86">0</text>
+<text class="on"  x="275" y="100">1</text><text class="off" x="287" y="100">0</text><text class="off" x="299" y="100">0</text><text class="off" x="311" y="100">0</text>
+<text class="on"  x="275" y="114">1</text><text class="off" x="287" y="114">0</text><text class="off" x="299" y="114">0</text><text class="off" x="311" y="114">0</text>
+<!-- P -->
+<text class="on"  x="345" y="30">1</text><text class="on"  x="357" y="30">1</text><text class="on"  x="369" y="30">1</text><text class="off" x="381" y="30">0</text>
+<text class="on"  x="345" y="44">1</text><text class="off" x="357" y="44">0</text><text class="off" x="369" y="44">0</text><text class="on"  x="381" y="44">1</text>
+<text class="on"  x="345" y="58">1</text><text class="off" x="357" y="58">0</text><text class="off" x="369" y="58">0</text><text class="on"  x="381" y="58">1</text>
+<text class="on"  x="345" y="72">1</text><text class="on"  x="357" y="72">1</text><text class="on"  x="369" y="72">1</text><text class="off" x="381" y="72">0</text>
+<text class="on"  x="345" y="86">1</text><text class="off" x="357" y="86">0</text><text class="off" x="369" y="86">0</text><text class="off" x="381" y="86">0</text>
+<text class="on"  x="345" y="100">1</text><text class="off" x="357" y="100">0</text><text class="off" x="369" y="100">0</text><text class="off" x="381" y="100">0</text>
+<text class="on"  x="345" y="114">1</text><text class="off" x="357" y="114">0</text><text class="off" x="369" y="114">0</text><text class="off" x="381" y="114">0</text>
+<!-- A -->
+<text class="off" x="415" y="30">0</text><text class="on"  x="427" y="30">1</text><text class="on"  x="439" y="30">1</text><text class="off" x="451" y="30">0</text>
+<text class="on"  x="415" y="44">1</text><text class="off" x="427" y="44">0</text><text class="off" x="439" y="44">0</text><text class="on"  x="451" y="44">1</text>
+<text class="on"  x="415" y="58">1</text><text class="off" x="427" y="58">0</text><text class="off" x="439" y="58">0</text><text class="on"  x="451" y="58">1</text>
+<text class="on"  x="415" y="72">1</text><text class="on"  x="427" y="72">1</text><text class="on"  x="439" y="72">1</text><text class="on"  x="451" y="72">1</text>
+<text class="on"  x="415" y="86">1</text><text class="off" x="427" y="86">0</text><text class="off" x="439" y="86">0</text><text class="on"  x="451" y="86">1</text>
+<text class="on"  x="415" y="100">1</text><text class="off" x="427" y="100">0</text><text class="off" x="439" y="100">0</text><text class="on"  x="451" y="100">1</text>
+<text class="on"  x="415" y="114">1</text><text class="off" x="427" y="114">0</text><text class="off" x="439" y="114">0</text><text class="on"  x="451" y="114">1</text>
+<!-- R -->
+<text class="on"  x="485" y="30">1</text><text class="on"  x="497" y="30">1</text><text class="on"  x="509" y="30">1</text><text class="off" x="521" y="30">0</text>
+<text class="on"  x="485" y="44">1</text><text class="off" x="497" y="44">0</text><text class="off" x="509" y="44">0</text><text class="on"  x="521" y="44">1</text>
+<text class="on"  x="485" y="58">1</text><text class="off" x="497" y="58">0</text><text class="off" x="509" y="58">0</text><text class="on"  x="521" y="58">1</text>
+<text class="on"  x="485" y="72">1</text><text class="on"  x="497" y="72">1</text><text class="on"  x="509" y="72">1</text><text class="off" x="521" y="72">0</text>
+<text class="on"  x="485" y="86">1</text><text class="off" x="497" y="86">0</text><text class="on"  x="509" y="86">1</text><text class="off" x="521" y="86">0</text>
+<text class="on"  x="485" y="100">1</text><text class="off" x="497" y="100">0</text><text class="off" x="509" y="100">0</text><text class="on"  x="521" y="100">1</text>
+<text class="on"  x="485" y="114">1</text><text class="off" x="497" y="114">0</text><text class="off" x="509" y="114">0</text><text class="on"  x="521" y="114">1</text>
+</svg>
