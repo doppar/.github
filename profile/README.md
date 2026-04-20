@@ -1,7 +1,5 @@
 <p align="center">
-    <a href="https://doppar.com" target="_blank">
-        <img src="https://raw.githubusercontent.com/doppar/doppar/7138fb0e72cd55256769be6947df3ac48c300700/public/logo.png" width="400">
-    </a>
+  <img src="https://raw.githubusercontent.com/doppar/.github/main/logo.svg" width="540">
 </p>
 
 <p align="center">
